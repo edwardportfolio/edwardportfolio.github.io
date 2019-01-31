@@ -2,10 +2,12 @@ h1 {
   background-color: #0088dd;
 }
 body {
-  width: 200px
+  width: 500px
 }
 p {
   border-width: medium;
   border-style: double;
   border-color: #0088dd;
+  text-align: right;
+  text-align: justify;
 }
