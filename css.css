@@ -1,8 +1,9 @@
 h1 {
-  background-color: blue;
+  background-color: #0088dd;
 }
 
 p {
   border-width: medium;
   border-style: double;
+  border-color: #0088dd;
 }
