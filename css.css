@@ -4,8 +4,6 @@ h1 {
 }
 p {
   width: 500px;
-  border-width: medium;
-  border-style: double;
-  border-color: #0088dd;
   text-align: justify;
+  text-align: center;
 }
