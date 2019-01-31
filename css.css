@@ -5,4 +5,5 @@ h1 {
 p {
   width: 500px;
   text-align: justify;
+  margin: auto;
 }
