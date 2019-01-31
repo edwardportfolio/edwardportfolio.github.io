@@ -1,7 +1,9 @@
 h1 {
   background-color: #0088dd;
 }
-
+body {
+  width: 200px
+}
 p {
   border-width: medium;
   border-style: double;
