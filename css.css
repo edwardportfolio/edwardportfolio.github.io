@@ -1,9 +1,9 @@
 h1 {
   background-color: #0088dd;
-  text-align: center;
+  text-align: left;
 }
 p {
   width: 500px;
-  text-align: justify;
+  text-align: left;
   margin: auto;
 }
