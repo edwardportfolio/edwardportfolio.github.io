@@ -5,21 +5,24 @@ h1 {
 h2 {
   text-align: center;
 }
+ul.recentcards, ul.wantcards {
+  border-style: outset;
+}
 
 li {
   padding: 20px;
 }
-.cardsearch{
-  text-align: center;
+
+.recentcards li {
+  display: inline;
+  margin: 10px;
 }
 
-.recentcards {
-  display: inline-flex;
-  border-style: solid;
-  border-color: #000000;
+.topcards, .cardwant {
+text-align: center;
+  margin: 40px;
 }
-
-.wantcards {
-  display: inline-flex;
-  border-style: solid;
+.wantcards li {
+  display: inline;
+  margin: 10px;
 }
