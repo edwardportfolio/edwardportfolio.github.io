@@ -6,17 +6,20 @@ h2 {
   text-align: center;
 }
 
+li {
+  padding: 20px;
+}
 .cardsearch{
   text-align: center;
 }
 
 .recentcards {
-  display: inline;
+  display: inline-flex;
   border-style: solid;
   border-color: #000000;
 }
 
 .wantcards {
-  display: inline;
+  display: inline-flex;
   border-style: solid;
 }
