@@ -9,7 +9,7 @@
 
     <!-- This element tells the browser how our text is formatted. You should include it, but you don't need to worry about it. -->
     <meta charset="utf-8" />
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
     <!-- The <title> element appears in the broswer tab. It's also used by search engines.
     Title best practices are here: https://moz.com/learn/seo/title-tag -->
     <title>Card</title>
@@ -18,21 +18,53 @@
     Description best practices are here: https://moz.com/learn/seo/meta-description -->
     <meta name="description" content="_______________INSERT_DECRIPTION_HERE_______________">
 
-    <!-- This <link> element points to our CSS stylesheet. This says, 'Look in the folder called CSS for the file called styles.css.
-    <link rel="stylesheet" href="css.css"> -->
+    <!-- This <link> element points to our CSS stylesheet. This says, 'Look in the folder called CSS for the file called styles.css. -->
+    <link rel="stylesheet" href="css.css">
 
   </head>
 <body>
+  <h1>
+    Card
+  </h1>
+  <h2>
+    Card App
+  </h2>
+  <p class="cardsearch">
+    Search card here:
+  </p>
 
-<div class="start">
-    <h1>TcgBinder</h1>
-    <p>Binder</p>
-    
+<input type="search" name="search" />
+<button id="button">Enter</button>
 
+  <h3 class="topcards">
+    Top cards from recent card sets:
+  </h3>
 
-</div>
+  <p>
+    <ul class="recentcards">
+      <li><img src="mtgcard.JPG" /></li> <!--pictures of cards go here -->
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+    </ul>
+  </p>
 
-<script type="text/javascript" src="js/materialize.min.js"></script>
+  <p>
+    <h3 class="cardwant">
+      Cards you want:
+    </h3>
+<!--put as inline element -->
+    <ul class="wantcards">
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+      <li><img src="mtgcard.JPG" /></li>
+    </ul>
+  </p>
 </body>
 
 </html>
