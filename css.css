@@ -1,3 +1,12 @@
+.start, .load, .card {
+  background-color: #4d4877;
+  margin: 20px 500px 0px 500px;
+  min-width: 200px;
+  min-height: 400px;
+  max-width: 300px;
+  max-height: 500px;
+}
+
 h1 {
   text-align: center;
 }
@@ -5,24 +14,43 @@ h1 {
 h2 {
   text-align: center;
 }
-ul.recentcards, ul.wantcards {
-  border-style: outset;
+
+.l2 {
+  margin-top: 20px;
 }
 
-li {
-  padding: 20px;
+
+.cardsearch {
+  margin-left: 10px;
 }
 
-.recentcards li {
-  display: inline;
-  margin: 10px;
+.cardwant {
+  text-align: center;
+  margin: 20px;
 }
 
-.topcards, .cardwant {
-text-align: center;
-  margin: 40px;
-}
 .wantcards li {
   display: inline;
-  margin: 10px;
+}
+
+.load {
+  margin-top: 10px;
+}
+
+.cardlogo {
+  width: 45px;
+  height:80px;
+ }
+
+.beginning, .center, .end {
+  text-align: center;
+  margin-right: 30px;
+}
+
+.cardtitle {
+  text-align: center;
+}
+
+.cardstuff {
+  margin-left: 80px;
 }
