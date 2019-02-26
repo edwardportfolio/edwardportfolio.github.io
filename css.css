@@ -1,56 +1,57 @@
-.start, .load, .card {
-  background-color: #4d4877;
-  margin: 20px 500px 0px 500px;
-  min-width: 200px;
-  min-height: 400px;
-  max-width: 300px;
-  max-height: 500px;
+html {
+  background-color: #64b5f6;
 }
 
-h1 {
+.websitetitle {
   text-align: center;
 }
 
-h2 {
+#input_text {
+  width: 250px;
+}
+
+.nav-extended, .button {
+  background-color: dodgerblue;
+}
+
+.loadcard {
+  margin-left: 600px;
+  margin-top: 130px;
+}
+
+.cardname {
   text-align: center;
 }
 
-.l2 {
-  margin-top: 20px;
+.card {
+  margin-left: 600px;
 }
 
-
-.cardsearch {
-  margin-left: 10px;
-}
-
-.cardwant {
+.paragraphcard {
   text-align: center;
-  margin: 20px;
+  margin: 0px 400px 0px 400px;
 }
 
-.wantcards li {
+.addcollection li {
   display: inline;
 }
 
-.load {
-  margin-top: 10px;
+.addcollectiontext {
+  margin-left: 460px;
 }
 
-.cardlogo {
-  width: 45px;
-  height:80px;
- }
-
-.beginning, .center, .end {
+.cardswanttitle {
   text-align: center;
-  margin-right: 30px;
+  margin-top: 40px;
 }
 
-.cardtitle {
+.cardswant {
   text-align: center;
 }
 
-.cardstuff {
-  margin-left: 80px;
+.cardswant li {
+  text-align: center;
+  display: inline;
+  margin-left: 200px;
+  margin-right: 200px;
 }
