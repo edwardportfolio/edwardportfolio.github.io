@@ -1,19 +1,27 @@
 html {
-  background-color: #64b5f6;
+  background-color: #ffffff;
 }
 
 body {
   background-image: url("tcgbl.jpg");
   background-repeat: no-repeat;
   background-position: center right;
+}
+
+.cardinfo {
+display: none;
+
 
 }
+
+
 .websitetitle {
   text-align: center;
 }
 
 #input_text {
   width: 250px;
+  margin: auto;
 }
 
 .nav-extended, .button {

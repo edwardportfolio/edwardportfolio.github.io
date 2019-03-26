@@ -26,7 +26,7 @@
 <div class="homescreen">
   <nav class="nav-extended">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">TcgBinder</a>
+      <a href="#" class="brand-logo">TcgBinder<!--<img src="tcgbl.jpg" /> --></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html">Account</a></li>
@@ -55,18 +55,47 @@
         <div class="row">
           <div class="input-field col s6">
             <input id="input_text" type="text" data-length="40">
-            <label for="input_text" style="color:#ffffff;">Type Card Name</label>
+            <label for="input_text" style="color:dodgerblue;">Type Card Name</label>
           </div>
         </div>
-    <a class="waves-effect waves-light btn button">Let's see what the value is</a>
+    <a class="waves-effect waves-light btn valueButton">Let's see what the value is</a>
   </div>
 
+<div class="cardinfo">
+  <h4 class="cardname">
+  <!-- Jace Beleren, Price: $7.00 -->
+  </h4>
+  <ul class="addcollection">
+  <li class="addcollectiontext">Did you pack this card? Add it to your collection.</li>
+    <li><a class="waves-effect waves-light btn button">Add to collection</a></li>
+  </ul>
 
+  <img class="card" src="mtgcard.JPG" />
+
+  <p class="paragraphcard">
+    Legendary Planeswalker — Jace (3)
+  +2: Each player draws a card.
+
+  −1: Target player draws a card.
+
+  −10: Target player puts the top twenty cards of their library into their graveyard.
+  </p>
+
+
+  <h6 class="cardswanttitle"><b>Cards You Want And Can Afford If You Have "Jace Beleren":</b></h6>
+  <ul class="cardswant">
+  <li> <img src="mtgcard.JPG" /></li>
+  <li><img src="mtgcard.JPG" /></li>
+  <li><img src="mtgcard.JPG" /></li>
+  </ul>
 
 </div>
-
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="jquery-3.3.1.js"></script>
+<script src="js.js"></script>
+
 </body>
 
 </html>
