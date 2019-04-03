@@ -1,19 +1,62 @@
 html {
-  background-color: #ffffff;
+  background-color: #616161;
 }
 
-body {
-  background-image: url("tcgbl.jpg");
-  background-repeat: no-repeat;
-  background-position: center right;
-}
-
-.cardinfo {
+.cardinfo, .cardEffect, .cardyc {
 display: none;
-
-
 }
 
+.effectButton, .cardButton {
+  font-family: 'Dokdo', cursive;
+}
+
+.cardValue {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cardValue:before{
+  content: "$";
+}
+
+.cardValue:after {
+  content: ".00"
+}
+
+.valuecard{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.end {
+  padding-bottom: 300px;
+}
+
+.valueButton, .collectionButton {
+  background-color: dodgerblue;
+}
+
+.valueButton {
+  width: 200px;
+  height: 45px;
+  padding: 2px;
+  font-size: 23px;
+}
+
+.valueButton:hover {
+  width: 230px;
+  height: 120px;
+}
+
+li.tab.ce {
+  margin: 0px 30px 0px 330px;
+}
+
+li.tab.cyc {
+  margin: 0px 30px 0px 80px;
+}
 
 .websitetitle {
   text-align: center;
@@ -24,7 +67,7 @@ display: none;
   margin: auto;
 }
 
-.nav-extended, .button {
+.nav-extended {
   background-color: dodgerblue;
 }
 
@@ -34,8 +77,35 @@ display: none;
   margin-left: 560px;
 }
 
+.cardtext {
+  max-width: 300px;
+  align-content: center;
+ }
+
+img.align-center {
+display: block;
+margin: 0px auto;
+}
+
+.bannerTitle {
+color: dodgerblue;
+font-family: 'Dokdo', cursive;
+}
+
+.banner {
+  background-color: #424242;
+  height: 130px;
+}
+
+.cardValue {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
 .cardname {
   text-align: center;
+  color: #ffffff;
 }
 
 .card {
@@ -45,6 +115,7 @@ display: none;
 .paragraphcard {
   text-align: center;
   margin: 0px 400px 0px 400px;
+  font-size: 20px;
 }
 
 .addcollection li {
@@ -67,6 +138,6 @@ display: none;
 .cardswant li {
   text-align: center;
   display: inline;
-  margin-left: 120px;
-  margin-right: 120px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
