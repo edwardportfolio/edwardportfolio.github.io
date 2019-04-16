@@ -4,7 +4,7 @@
 
 ****/
 
-Plotly.d3.csv('data.csv', function(err, rows){
+Plotly.d3.csv('data-csv.csv', function(err, rows){
 
 
   /***
