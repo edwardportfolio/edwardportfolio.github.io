@@ -16,7 +16,7 @@ Plotly.d3.csv('data.csv', function(err, rows){
 
 
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
-  var majors = {
+  var mtg = {
     // x and y are arrays of numeric values, so we can create those using unpack().
     x: unpack(rows, 'Power'),
     y: unpack(rows, 'Toughness'),
@@ -40,7 +40,7 @@ Plotly.d3.csv('data.csv', function(err, rows){
   /*** Now that we've created our data objects using our CSV, we just create the visualization as we've done before: ***/
 
   // Create the data object as an array of our data series objects:
-  var data = [majors];
+  var data = [mtg];
 
   // The layout object provides options for how our visualization will appear:
   var layout = {
