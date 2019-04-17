@@ -32,7 +32,7 @@ console.log(unpack(rows, 'Toughness'));
         type: 'filter',
         target: 'y',
         operation: '>',
-        value: 20000
+        value: 0
       }
     ]
   };
