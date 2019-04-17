@@ -21,10 +21,8 @@ console.log(unpack(rows, 'Toughness'));
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    //x: unpack(rows, 'Power'),
-    //y: unpack(rows, 'Toughness'),
-    x: [1,2],
-    y: [1,2],
+    x: +unpack(rows, 'Power'),
+    y: +unpack(rows, 'Toughness'),
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
     text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
