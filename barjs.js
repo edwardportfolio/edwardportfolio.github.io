@@ -4,15 +4,17 @@
 
 ****/
 
+/***
+This function is useful for returning an array of values corresponding to a column in your CSV file. It's not built in to PLotly, so you have to declare it as follows:
+***/
+var unpack = function(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+
 Plotly.d3.csv('data-csv.csv', function(err, rows){
 
+/* function */
 
-  /***
-  This function is useful for returning an array of values corresponding to a column in your CSV file. It's not built in to PLotly, so you have to declare it as follows:
-  ***/
-  var unpack = function(rows, key) {
-    return rows.map(function(row) { return row[key]; });
-  }
 
 console.log(unpack(rows, 'Power'));
 console.log(unpack(rows, 'Toughness'));
