@@ -18,11 +18,14 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
 
 console.log(unpack(rows, 'Power'));
 console.log(unpack(rows, 'Toughness'));
+
+let powerArray = unpack(rows, 'Power').map(Number)
+let toughnessArray = unpack(rows, 'Toughness').map(Number)
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    x: +unpack(rows, 'Power'),
-    y: +unpack(rows, 'Toughness'),
+    x: powerArray,
+    y: toughnessArray,
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
     text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
