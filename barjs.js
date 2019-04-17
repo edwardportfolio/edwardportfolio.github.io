@@ -14,7 +14,7 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
     return rows.map(function(row) { return row[key]; });
   }
 
-
+console.log(unpack(rows, 'Power'));
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg = {
     // x and y are arrays of numeric values, so we can create those using unpack().
