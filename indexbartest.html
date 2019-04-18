@@ -1,0 +1,40 @@
+!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Using jQuery for the interaction in this example. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.glitch.com/501b06a0-c0b9-4444-bc44-327800ab4479%2Fplotly-latest.min.js?1521484933194"></script>
+
+    <script src="jquery.csv.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <article>
+      <div id="viz_holder">
+        <div class="viz_controls">
+          <form action="">
+            <select name="crime_type" id="crime_type">
+              <option value="All">All</option>
+            </select>
+          </form>
+        </div>
+        <div id="viz"></div>
+
+
+      </div>
+      <div class="text">
+        <p>
+           Remix this project and modify it so that the user can select a type of crime from the dropdown and see where those crimes are located on the map.
+        </p>
+      </div>
+    </article>
+
+
+  </body>
+</html>

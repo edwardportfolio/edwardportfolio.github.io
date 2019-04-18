@@ -1,0 +1,65 @@
+html {
+  font-family: helvetica;
+}
+
+article {
+ display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+article .text {
+  width: 500px;
+  margin: 2em;
+  line-height: 1.5em;
+  font-family: georgia;
+  border-top: 1px solid;
+  padding-top: 1em;
+}
+
+#viz_holder {
+  display: flex;
+  flex-flow: column wrap;
+  width: 400px;
+  flex-grow: 1;
+}
+
+#viz {
+  height: 500px;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#viz_holder .viz_controls {
+  flex-grow: 0;
+}
+
+#viz_holder .viz_controls ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#viz_holder .viz_controls li {
+  list-style-type: none;
+  display: block;
+}
+
+#viz_holder .viz_controls li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: .8em;
+  color: #222;
+  background-color: #ededed;
+  padding: 4px 6px;
+  margin: 0 2px 2px 0;
+  display: block;
+}
+
+#viz_holder .viz_controls li a.active {
+  background-color: #222;
+  color: #ededed;
+}
