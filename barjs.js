@@ -46,6 +46,13 @@ $('Power').append(
 );
 }
 
+$('#array_power').on('change', function(event) {
+$('#viz').remove();
+$('#viz_holder').append('<div id="viz"></div>');
+drawPlot(event.target.value);
+
+});
+
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg = {
     // x and y are arrays of numeric values, so we can create those using unpack().
