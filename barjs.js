@@ -23,10 +23,11 @@ let powerArray = unpack(rows, 'Power').map(Number)
 let toughnessArray = unpack(rows, 'Toughness').map(Number)
 
 
-let arrayp = $.distinct(
+/**let arrayp = $.distinct(
   unpack(rows, 'Power')
 );
 console.log(arrayp);
+**/
 
 for(let i = 0; i < arrayp.length; i++) {
 
