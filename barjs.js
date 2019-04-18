@@ -3,6 +3,16 @@
   To pull in data from a CSV file, we wrap our javascript inside a plot.d3.csv() function.
 
 ****/
+// This lets us get the unique items from an array:
+$.extend({
+    distinct : function(anArray) {
+       var result = [];
+       $.each(anArray, function(i,v){
+           if ($.inArray(v, result) == -1) result.push(v);
+       });
+       return result;
+    }
+});
 
 /***
 This function is useful for returning an array of values corresponding to a column in your CSV file. It's not built in to PLotly, so you have to declare it as follows:
@@ -23,11 +33,11 @@ let powerArray = unpack(rows, 'Power').map(Number)
 let toughnessArray = unpack(rows, 'Toughness').map(Number)
 
 
-/**let arrayp = $.distinct(
+let differentPowers = $.distinct(
   unpack(rows, 'Power')
 );
 console.log(arrayp);
-**/
+
 
 for(let i = 0; i < powerArray.length; i++) {
 
