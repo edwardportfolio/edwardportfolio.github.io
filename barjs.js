@@ -26,6 +26,9 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
     return item.Set == "Unstable";
   })
 
+  var rows_unhinged = rows.filter(function(item) {
+    return item.Set == "Unhinged";
+  })
 
 
 console.log(unpack(rows, 'Power'));
@@ -62,6 +65,20 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
 
   var data_unstable = [mtg_unstable];
 
+  /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
+  var mtg_unhinged = {
+    // x and y are arrays of numeric values, so we can create those using unpack().
+    x: unpack(rows_unhinged, 'Power'),
+    y: unpack(rows_unhinged, 'Toughness'),
+    type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
+    mode: 'markers', // possible modes: markers, markers+text, lines
+    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    name: 'Mtg'
+  };
+
+  // Create the data object as an array of our data series objects:
+  var data_unhinged = [mtg_unhinged];
+
 
   /*** Now that we've created our data objects using our CSV, we just create the visualization as we've done before: ***/
 
@@ -83,13 +100,16 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   var layout_unstable = Object.assign({}, layout);
     layout_unstable.title = "Unstable";
 
+  var layout_unhinged = Object.assign({}, layout);
+    layout_unhinged.title = "Unhinged Creatures Power and Toughness";
+
   var options = {
    displayModeBar: false, // disable zoom, save and other toolbar options.
   }
 
   Plotly.newPlot('viz', data, layout, options);
   Plotly.newPlot('viz_unstable',data_unstable, layout_unstable, options);
-
+  Plotly.newPlot('viz_unhinged', data_unhinged, layout_unhinged, options);
 
 
 })
