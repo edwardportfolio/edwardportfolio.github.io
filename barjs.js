@@ -28,6 +28,13 @@ let arrayp = $.distinct(
 );
 console.log(arrayp);
 
+for(let i = 0; i < arrayp.length; i++) {
+
+$('Power').append(
+  '<option value="' + arrayp[i] + '">' + arrayp[i] + '</option>'
+);
+}
+
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg = {
     // x and y are arrays of numeric values, so we can create those using unpack().
