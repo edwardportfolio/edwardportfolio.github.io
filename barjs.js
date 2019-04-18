@@ -32,7 +32,7 @@ console.log(arrayp);
 for(let i = 0; i < arrayp.length; i++) {
 
 $('Power').append(
-  '<option value="' + arrayp[i] + '">' + arrayp[i] + '</option>'
+  '<option value="' + powerArray[i] + '">' + powerArray[i] + '</option>'
 );
 }
 
