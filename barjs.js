@@ -40,12 +40,11 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
 ***/
 
 
-for(let i = 0; i < powerArray.length; i++) {
+for(let i = 0; i < powerArray.length; i++)
 
 $('#array_power').append(
   '<option value="' + powerArray[i] + '">' + powerArray[i] + '</option>'
 );
-}
 
 $('#array_power').on('change', function(event) {
 $('#viz').remove();
