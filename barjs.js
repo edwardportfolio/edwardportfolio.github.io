@@ -48,7 +48,7 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     x: powerArray,
     y: toughnessArray,
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
-    mode: 'markers', // possible modes: markers, markers+text, lines
+    mode: 'lines+markers', // possible modes: markers, markers+text, lines
     text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
