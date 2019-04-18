@@ -21,7 +21,13 @@ console.log(unpack(rows, 'Toughness'));
 
 let powerArray = unpack(rows, 'Power').map(Number)
 let toughnessArray = unpack(rows, 'Toughness').map(Number)
-console.log('!');
+
+
+let arrayp = $.distinct(
+  unpack(rows, 'Power')
+);
+console.log(arrayp);
+
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg = {
     // x and y are arrays of numeric values, so we can create those using unpack().
