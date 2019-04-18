@@ -29,7 +29,7 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
 console.log(arrayp);
 **/
 
-for(let i = 0; i < arrayp.length; i++) {
+for(let i = 0; i < powerArray.length; i++) {
 
 $('Power').append(
   '<option value="' + powerArray[i] + '">' + powerArray[i] + '</option>'
