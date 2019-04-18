@@ -4,7 +4,7 @@
 
 ****/
 // This lets us get the unique items from an array:
-/**$.extend({
+/*** $.extend({
     distinct : function(anArray) {
        var result = [];
        $.each(anArray, function(i,v){
@@ -13,7 +13,7 @@
        return result;
     }
 });
-**/
+***/
 
 /***
 This function is useful for returning an array of values corresponding to a column in your CSV file. It's not built in to PLotly, so you have to declare it as follows:
@@ -33,11 +33,11 @@ console.log(unpack(rows, 'Toughness'));
 let powerArray = unpack(rows, 'Power').map(Number)
 let toughnessArray = unpack(rows, 'Toughness').map(Number)
 
-
-let differentPowers = $.distinct(
+/***
+ let differentPowers = $.distinct(
   unpack(rows, 'Power')
 );
-console.log(arrayp);
+***/
 
 
 for(let i = 0; i < powerArray.length; i++) {
