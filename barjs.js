@@ -16,6 +16,17 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
 
 /* function */
 
+/***
+  To do more complicated filtering, we can use javascrip arrays' filter() method.
+
+  Here, we create three different sets of rows.
+  ***/
+
+  var rows_unstable = rows.filter(function(item) {
+    return item.Set == "Unstable";
+  })
+
+
 
 console.log(unpack(rows, 'Power'));
 console.log(unpack(rows, 'Toughness'));
@@ -36,13 +47,25 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     name: 'Mtg'
   };
 
+  // Create the data object as an array of our data series objects:
+  var data = [mtg];
 
+  var mtg_unstable = {
+    // x and y are arrays of numeric values, so we can create those using unpack().
+    x: unpack(rows_unstable, 'Power'),
+    y: unpack(rows_unstable, 'Toughness'),
+    type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
+    mode: 'markers', // possible modes: markers, markers+text, lines
+    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    name: 'Mtg'
+  };
+
+  var data_unstable = [mtg_unstable];
 
 
   /*** Now that we've created our data objects using our CSV, we just create the visualization as we've done before: ***/
 
-  // Create the data object as an array of our data series objects:
-  var data = [mtg];
+
 
   // The layout object provides options for how our visualization will appear:
   var layout = {
@@ -57,12 +80,15 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     }
   }
 
+  var layout_unstable = Object.assign({}, layout);
+    layout_unstable.title = "Unstable";
+
   var options = {
    displayModeBar: false, // disable zoom, save and other toolbar options.
   }
 
   Plotly.newPlot('viz', data, layout, options);
-
+  Plotly.newPlot('viz_unstable',data_unstable, layout_unstable, options);
 
 
 
