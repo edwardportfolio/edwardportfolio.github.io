@@ -48,7 +48,7 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     x: powerArray,
     y: toughnessArray,
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
-    mode: 'lines+markers', // possible modes: markers, markers+text, lines
+    mode: 'markers', // possible modes: markers, markers+text, lines
     text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
@@ -66,7 +66,10 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
     text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
-    name: 'Mtg'
+    name: 'Mtg',
+    marker: {
+      color: '#172274'
+    }
   };
 
   var data_unstable = [mtg_unstable];
@@ -79,7 +82,10 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
     text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
-    name: 'Mtg'
+    name: 'Mtg',
+    marker: {
+      color: '#172274'
+    }
   };
 
   // Create the data object as an array of our data series objects:
@@ -93,7 +99,10 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
     text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
-    name: 'Mtg'
+    name: 'Mtg',
+    marker: {
+      color: '#172274'
+    }
   };
 
   // Create the data object as an array of our data series objects:
