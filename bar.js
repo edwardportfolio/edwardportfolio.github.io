@@ -4,6 +4,16 @@
 
 ****/
 // This lets us get the unique items from an array:
+/*** $.extend({
+    distinct : function(anArray) {
+       var result = [];
+       $.each(anArray, function(i,v){
+           if ($.inArray(v, result) == -1) result.push(v);
+       });
+       return result;
+    }
+});
+***/
 
 /***
 This function is useful for returning an array of values corresponding to a column in your CSV file. It's not built in to PLotly, so you have to declare it as follows:
@@ -23,7 +33,25 @@ console.log(unpack(rows, 'Toughness'));
 let powerArray = unpack(rows, 'Power').map(Number)
 let toughnessArray = unpack(rows, 'Toughness').map(Number)
 
+/***
+ let differentPowers = $.distinct(
+  unpack(rows, 'Power')
+);
+***/
 
+
+for(let i = 0; i < powerArray.length; i++)
+
+$('#array_power').append(
+  '<option value="' + powerArray[i] + '">' + powerArray[i] + '</option>'
+);
+
+$('#array_power').on('change', function(event) {
+$('#viz').remove();
+$('#viz_holder').append('<div id="viz"></div>');
+drawPlot(event.target.value);
+
+});
 
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg = {
