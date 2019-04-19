@@ -41,7 +41,7 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
   var rows_champstates = rows.filter(function(item) {
     return item.Set == "Champs_and_States";
   })
-
+  console.log(rows_champstates);
 //  var rows_friday = rows.filter(function(item) {
   //  return item.Set == "Friday_Night_Magic";
 //  })
