@@ -237,10 +237,13 @@ var mtg_friday = {
   });
 
   $('button#gt').on('click', function(){
+    $('#viz').hide();
     $('#viz_gateway').show();
     $('#viz_unhinged').show();
     $('#viz_unglued').hide();
     $('#viz_friday').hide();
+    $('#viz_champ').hide();
+    $('#viz_unstable').hide();
     console.log('works');
   });
 
@@ -250,6 +253,8 @@ var mtg_friday = {
     $('#viz_unhinged').hide();
     $('#viz_gateway').hide();
     $('#viz_friday').hide();
+    $('#viz_champ').show()
+    $('#viz_unstable').show();
     console.log('works');
   });
 
