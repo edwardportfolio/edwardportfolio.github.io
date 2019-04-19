@@ -180,7 +180,7 @@ var mtg_friday = {
 
   // The layout object provides options for how our visualization will appear:
   var layout = {
-    title:'Magic The Gathering',
+    title:'Magic The Gathering Sets',
     showlegend: false,
     hovermode: true, // if false, disables the hover text for the entire plot
     xaxis: {
@@ -192,7 +192,7 @@ var mtg_friday = {
   }
 
   var layout_unstable = Object.assign({}, layout);
-    layout_unstable.title = "Unstable";
+    layout_unstable.title = "Unstable Creatures Power and Toughness";
 
   var layout_unhinged = Object.assign({}, layout);
     layout_unhinged.title = "Unhinged Creatures Power and Toughness";
