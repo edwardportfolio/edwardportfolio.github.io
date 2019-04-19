@@ -7,6 +7,9 @@
 }
 
 .buttonlist {
-  display: inline;
   list-style: none;
+}
+
+.lbtn {
+  display: inline;
 }

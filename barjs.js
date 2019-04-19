@@ -222,4 +222,15 @@ var mtg_friday = {
   Plotly.newPlot('viz_gateway', data_gateway, layout_gateway, options);
   Plotly.newPlot('viz_champ', data_champ, layout_champ, options);
   Plotly.newPlot('viz_friday', data_friday, layout_friday, options);
+
+
+
+  $('button#ft').on('click', function(){
+    $('#viz').hide();
+    $('#viz_unstable').hide();
+    $('#viz_unhinged').hide();
+    $('#viz_champ').hide();
+    $('#viz_gateway').hide();
+  });
+  
 })
