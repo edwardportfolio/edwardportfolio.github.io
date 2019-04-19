@@ -13,6 +13,7 @@ var unpack = function(rows, key) {
 }
 
 $(document).ready(function(){
+  
 Plotly.d3.csv('data-csv.csv', function(err, rows){
 
 /* function */
