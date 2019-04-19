@@ -204,8 +204,8 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   var layout_champstates = Object.assign({}, layout);
     layout_champstates.title = "Ch and S Creatures Power and Toughness";
 
-    var layout_friday = Object.assign({}, layout);
-      layout_friday.title = "Friday Creatures Power and Toughness";
+  var layout_friday = Object.assign({}, layout);
+    layout_friday.title = "Friday Creatures Power and Toughness";
 
   var options = {
    displayModeBar: false, // disable zoom, save and other toolbar options.
