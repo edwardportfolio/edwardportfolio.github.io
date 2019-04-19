@@ -12,6 +12,7 @@ var unpack = function(rows, key) {
   return rows.map(function(row) { return row[key]; });
 }
 
+$(document).ready(function(){
 Plotly.d3.csv('data-csv.csv', function(err, rows){
 
 /* function */
@@ -224,7 +225,7 @@ var mtg_friday = {
   Plotly.newPlot('viz_friday', data_friday, layout_friday, options);
 
 
-$(document).ready(function(){
+
   $('button#ft').on('click', function(){
     $('#viz').hide();
     $('#viz_unstable').hide();
@@ -234,6 +235,6 @@ $(document).ready(function(){
     console.log('works');
   });
 
-});
-
 })
+
+});
