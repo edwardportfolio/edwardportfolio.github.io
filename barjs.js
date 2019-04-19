@@ -249,6 +249,7 @@ var mtg_friday = {
     console.log('works');
   });
 
+
   $('button#ct').on('click', function(){
     $('#viz').hide();
     $('#viz_unglued').hide();
@@ -259,6 +260,18 @@ var mtg_friday = {
     $('#viz_unstable').show();
     console.log('works');
   });
+
+  $('button#mtgall').on('click', function(){
+    $('#viz').show();
+    $('#viz_gateway').show();
+    $('#viz_unhinged').show();
+    $('#viz_unglued').show();
+    $('#viz_friday').show();
+    $('#viz_champ').show();
+    $('#viz_unstable').show();
+    console.log('works');
+  });
+
 
 })
 
