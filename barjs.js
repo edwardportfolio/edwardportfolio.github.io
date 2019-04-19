@@ -231,6 +231,7 @@ var mtg_friday = {
     $('#viz_unhinged').hide();
     $('#viz_champ').hide();
     $('#viz_gateway').hide();
+    console.log('works');
   });
-  
+
 })
