@@ -42,9 +42,9 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
     return item.Set == "Champs and States";
   })
 
-//  var rows_friday = rows.filter(function(item) {
-  //  return item.Set == "Friday_Night_Magic";
-//  })
+  var rows_friday = rows.filter(function(item) {
+    return item.Set == "Friday_Night_Magic";
+  })
 
 console.log(unpack(rows, 'Power'));
 console.log(unpack(rows, 'Toughness'));
@@ -155,7 +155,7 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
 
 
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
-/***  var mtg_friday = {
+var mtg_friday = {
     // x and y are arrays of numeric values, so we can create those using unpack().
     x: unpack(rows_friday, 'Power'),
     y: unpack(rows_friday, 'Toughness'),
@@ -166,10 +166,10 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     marker: {
       color: 'red'
     }
-  }; ***/
+  };
 
   // Create the data object as an array of our data series objects:
-  // var data_friday = [mtg_friday];
+   var data_friday = [mtg_friday];
 
 
   /*** Now that we've created our data objects using our CSV, we just create the visualization as we've done before: ***/
@@ -204,6 +204,8 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   var layout_champ = Object.assign({}, layout);
       layout_champ.title = "Champ Creatures Power and Toughness";
 
+      var layout_friday = Object.assign({}, layout);
+        layout_friday.title = "Friday Creatures Power and Toughness";
 
 
 //  var layout_friday = Object.assign({}, layout);
@@ -218,6 +220,6 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   Plotly.newPlot('viz_unhinged', data_unhinged, layout_unhinged, options);
   Plotly.newPlot('viz_unglued', data_unglued, layout_unglued, options);
   Plotly.newPlot('viz_gateway', data_gateway, layout_gateway, options);
-  Plotl.newPlot('viz_champ', data_champ, layout_champ, options);
-//  Plotly.newPlot('viz_friday', data_friday, layout_friday, options);
+  Plotly.newPlot('viz_champ', data_champ, layout_champ, options);
+  Plotly.newPlot('viz_friday', data_friday, layout_friday, options);
 })
