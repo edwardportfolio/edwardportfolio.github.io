@@ -39,10 +39,9 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
   })
 
   var rows_champ = rows.filter(function(item) {
-    return item.Set == "Champs_and_States";
+    return item.Set == "Champs and States";
   })
 
-  console.log(rows_champstates);
 //  var rows_friday = rows.filter(function(item) {
   //  return item.Set == "Friday_Night_Magic";
 //  })
@@ -202,7 +201,7 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   var layout_gateway = Object.assign({}, layout);
     layout_gateway.title = "Gateway Creatures Power and Toughness";
 
-    var layout_champ = Object.assign({}, layout);
+  var layout_champ = Object.assign({}, layout);
       layout_champ.title = "Champ Creatures Power and Toughness";
 
 
