@@ -39,7 +39,7 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
   })
 
   var rows_champstates = rows.filter(function(item) {
-    return item.Set == "Champs and States";
+    return item.Set == "Champs_and_States";
   })
 
 console.log(unpack(rows, 'Power'));
