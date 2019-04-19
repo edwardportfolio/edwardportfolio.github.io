@@ -224,7 +224,7 @@ var mtg_friday = {
   Plotly.newPlot('viz_friday', data_friday, layout_friday, options);
 
 
-
+$(document).ready(function(){
   $('button#ft').on('click', function(){
     $('#viz').hide();
     $('#viz_unstable').hide();
@@ -233,5 +233,7 @@ var mtg_friday = {
     $('#viz_gateway').hide();
     console.log('works');
   });
+
+});
 
 })
