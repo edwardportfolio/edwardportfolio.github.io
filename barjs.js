@@ -38,9 +38,10 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
     return item.Set == "Gateway";
   })
 
-  var rows_champstates = rows.filter(function(item) {
+  var rows_champ = rows.filter(function(item) {
     return item.Set == "Champs_and_States";
   })
+
   console.log(rows_champstates);
 //  var rows_friday = rows.filter(function(item) {
   //  return item.Set == "Friday_Night_Magic";
@@ -137,11 +138,10 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   // Create the data object as an array of our data series objects:
   var data_gateway = [mtg_Gateway];
 
-  /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
-  var mtg_champstates = {
+  var mtg_champ = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    x: unpack(rows_champstates, 'Power'),
-    y: unpack(rows_champstates, 'Toughness'),
+    x: unpack(rows_champ, 'Power'),
+    y: unpack(rows_champ, 'Toughness'),
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
     text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
@@ -152,7 +152,8 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   };
 
   // Create the data object as an array of our data series objects:
-  var data_champstates = [mtg_champstates];
+  var data_champ = [mtg_champ];
+
 
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
 /***  var mtg_friday = {
@@ -201,8 +202,10 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   var layout_gateway = Object.assign({}, layout);
     layout_gateway.title = "Gateway Creatures Power and Toughness";
 
-  var layout_champstates = Object.assign({}, layout);
-    layout_champstates.title = "Ch and S Creatures Power and Toughness";
+    var layout_champ = Object.assign({}, layout);
+      layout_champ.title = "Champ Creatures Power and Toughness";
+
+
 
 //  var layout_friday = Object.assign({}, layout);
   //  layout_friday.title = "Friday Creatures Power and Toughness";
@@ -216,6 +219,6 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   Plotly.newPlot('viz_unhinged', data_unhinged, layout_unhinged, options);
   Plotly.newPlot('viz_unglued', data_unglued, layout_unglued, options);
   Plotly.newPlot('viz_gateway', data_gateway, layout_gateway, options);
-  Plotly.newPlot('viz_champstates', data_champstates, layout_champstates, options);
+  Plotl.newPlot('viz_champ', data_champ, layout_champ, options);
 //  Plotly.newPlot('viz_friday', data_friday, layout_friday, options);
 })
