@@ -43,7 +43,7 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
   })
 
   var rows_friday = rows.filter(function(item) {
-    return item.Set == "Friday_Night_Magic";
+    return item.Set == "Friday Night Magic";
   })
 
 console.log(unpack(rows, 'Power'));
