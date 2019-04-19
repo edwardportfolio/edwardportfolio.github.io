@@ -5,3 +5,8 @@
   border: 1px solid #ccc;
   float: left;
 }
+
+.buttonlist {
+  display: inline;
+  list-style: none;
+}
