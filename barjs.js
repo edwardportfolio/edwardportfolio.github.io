@@ -13,7 +13,7 @@ var unpack = function(rows, key) {
 }
 
 $(document).ready(function(){
-  
+
 Plotly.d3.csv('data-csv.csv', function(err, rows){
 
 /* function */
@@ -233,6 +233,24 @@ var mtg_friday = {
     $('#viz_unhinged').hide();
     $('#viz_champ').hide();
     $('#viz_gateway').hide();
+    console.log('works');
+  });
+
+  $('button#gt').on('click', function(){
+    $('#viz').hide();
+    $('#viz_unstable').hide();
+    $('#viz_unglued').hide();
+    $('#viz_champ').hide();
+    $('#viz_friday').hide();
+    console.log('works');
+  });
+
+  $('button#ct').on('click', function(){
+    $('#viz').hide();
+    $('#viz_unglued').hide();
+    $('#viz_unhinged').hide();
+    $('#viz_gateway').hide();
+    $('#viz_friday').hide();
     console.log('works');
   });
 
