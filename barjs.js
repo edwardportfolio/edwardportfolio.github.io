@@ -237,10 +237,9 @@ var mtg_friday = {
   });
 
   $('button#gt').on('click', function(){
-    $('#viz').hide();
-    $('#viz_unstable').hide();
+    $('#viz_gateway').show();
+    $('#viz_unhinged').show();
     $('#viz_unglued').hide();
-    $('#viz_champ').hide();
     $('#viz_friday').hide();
     console.log('works');
   });
