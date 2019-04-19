@@ -34,6 +34,10 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
     return item.Set == "Unglued";
   })
 
+  var rows_gateway = rows.filter(function(item) {
+    return item.Set == "Gateway";
+  })
+
 console.log(unpack(rows, 'Power'));
 console.log(unpack(rows, 'Toughness'));
 
@@ -108,6 +112,22 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   // Create the data object as an array of our data series objects:
   var data_unglued = [mtg_unglued];
 
+  /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
+  var mtg_Gateway = {
+    // x and y are arrays of numeric values, so we can create those using unpack().
+    x: unpack(rows_gateway, 'Power'),
+    y: unpack(rows_gateway, 'Toughness'),
+    type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
+    mode: 'markers', // possible modes: markers, markers+text, lines
+    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    name: 'Mtg',
+    marker: {
+      color: 'red'
+    }
+  };
+
+  // Create the data object as an array of our data series objects:
+  var data_gateway = [mtg_Gateway];
 
   /*** Now that we've created our data objects using our CSV, we just create the visualization as we've done before: ***/
 
@@ -135,6 +155,9 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   var layout_unglued = Object.assign({}, layout);
     layout_unglued.title = "Unglued Creatures Power and Toughness";
 
+    var layout_gateway = Object.assign({}, layout);
+      layout_gateway.title = "Gateway Creatures Power and Toughness";
+
   var options = {
    displayModeBar: false, // disable zoom, save and other toolbar options.
   }
@@ -143,6 +166,6 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   Plotly.newPlot('viz_unstable',data_unstable, layout_unstable, options);
   Plotly.newPlot('viz_unhinged', data_unhinged, layout_unhinged, options);
   Plotly.newPlot('viz_unglued', data_unglued, layout_unglued, options);
-
+  Plotly.newPlot('viz_gateway', data_gateway, layout_gateway, options);
 
 })
