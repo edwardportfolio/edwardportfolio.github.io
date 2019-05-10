@@ -1,5 +1,97 @@
 html {
-  background-color: #616161;
+
+}
+
+#tcg {
+  max-width: 300px;
+  height: 33em;
+  background-color: #424242;
+  margin-left: 30px;
+}
+
+ul li.tcguser {
+  border-bottom: .5px solid black;
+}
+
+.tcgtcgbutton {
+  color: dodgerblue;
+}
+
+ul.collection {
+  border: none;
+}
+
+ul.badge li {
+  display: inline;
+}
+
+.tg {
+  color: #000000;
+  margin-left: 8px;
+}
+
+.textright {
+  width: 12em;
+  background-color: #ffffff;
+  text-align: center;
+  margin-left: 131px;
+  margin-top: 3px;
+}
+
+.textleft {
+  width: 12em;
+  background-color: #ffffff;
+  text-align: center;
+  margin-right: 131px;
+  margin-top: 3px;
+}
+
+.textrightleft {
+  position: absolute;
+  bottom: 11em;
+}
+
+.buttont {
+  margin-left: 72px;
+  height: 2em;
+  width: 8em;
+  font-size: 20px;
+  background-color: dodgerblue;
+}
+
+.buttontrade {
+  margin-left: 0px;
+  height: 2em;
+  width: 6.5em;
+  background-color: dodgerblue;
+  font-size: 20px;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 8px;
+}
+
+.buttontext  {
+  background-color: dodgerblue;
+  height: 2em;
+  width: 8em;
+  font-size: 20px;
+  margin-left: 72px;
+}
+
+.text {
+  width: 12em;
+  height: 4em;
+  margin-left: 44px;
+}
+
+.buttontr {
+  margin-left: 2px;
+  width: 7em;
+  height: 2em;
+  font-size: 20px;
+  background-color: dodgerblue;
 }
 
 .cardinfo, .cardEffect, .cardyc {
@@ -63,7 +155,7 @@ li.tab.cyc {
 }
 
 #input_text {
-  width: 250px;
+  width: 278px;
   margin: auto;
 }
 
@@ -88,13 +180,19 @@ margin: 0px auto;
 }
 
 .bannerTitle {
-color: dodgerblue;
-font-family: 'Dokdo', cursive;
+  text-align: center;
+  color: dodgerblue;
+  font-family: 'Dokdo', cursive;
 }
 
 .banner {
   background-color: #424242;
-  height: 130px;
+  height: 73px;
+}
+
+.screen {
+  position: relative;
+  height: 100%;
 }
 
 .cardValue {
@@ -108,8 +206,8 @@ font-family: 'Dokdo', cursive;
   color: #ffffff;
 }
 
-.card {
-  margin-left: 600px;
+#card .tc {
+  width: 300px;
 }
 
 .paragraphcard {

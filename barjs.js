@@ -14,7 +14,7 @@ var unpack = function(rows, key) {
 
 $(document).ready(function(){
 
-Plotly.d3.csv('data-csv.csv', function(err, rows){
+Plotly.d3.csv('', function(err, rows){
 
 /* function */
 
@@ -25,34 +25,34 @@ Plotly.d3.csv('data-csv.csv', function(err, rows){
   ***/
 
   var rows_unstable = rows.filter(function(item) {
-    return item.Set == "Unstable";
+    return item.Set == "";
   })
 
   var rows_unhinged = rows.filter(function(item) {
-    return item.Set == "Unhinged";
+    return item.Set == "";
   })
 
   var rows_unglued = rows.filter(function(item) {
-    return item.Set == "Unglued";
+    return item.Set == "";
   })
 
   var rows_gateway = rows.filter(function(item) {
-    return item.Set == "Gateway";
+    return item.Set == "";
   })
 
   var rows_champ = rows.filter(function(item) {
-    return item.Set == "Champs and States";
+    return item.Set == "";
   })
 
   var rows_friday = rows.filter(function(item) {
-    return item.Set == "Friday Night Magic";
+    return item.Set == "";
   })
 
-console.log(unpack(rows, 'Power'));
-console.log(unpack(rows, 'Toughness'));
+console.log(unpack(rows, ''));
+console.log(unpack(rows, ''));
 
-let powerArray = unpack(rows, 'Power').map(Number)
-let toughnessArray = unpack(rows, 'Toughness').map(Number)
+let powerArray = unpack(rows, '').map(Number)
+let toughnessArray = unpack(rows, '').map(Number)
 
 
 
@@ -63,7 +63,7 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
     y: toughnessArray,
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
-    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    text: unpack(rows, ''), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
       color: '#000000'
@@ -75,11 +75,11 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
 
   var mtg_unstable = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    x: unpack(rows_unstable, 'Power'),
-    y: unpack(rows_unstable, 'Toughness'),
+    x: unpack(rows_unstable, ''),
+    y: unpack(rows_unstable, ''),
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
-    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    text: unpack(rows, ''), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
       color: '#172274'
@@ -91,11 +91,11 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg_unhinged = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    x: unpack(rows_unhinged, 'Power'),
-    y: unpack(rows_unhinged, 'Toughness'),
+    x: unpack(rows_unhinged, ''),
+    y: unpack(rows_unhinged, ''),
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
-    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    text: unpack(rows, ''), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
       color: '#172274'
@@ -108,11 +108,11 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg_unglued = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    x: unpack(rows_unglued, 'Power'),
-    y: unpack(rows_unglued, 'Toughness'),
+    x: unpack(rows_unglued, ''),
+    y: unpack(rows_unglued, ''),
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
-    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    text: unpack(rows, ''), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
       color: '#172274'
@@ -125,11 +125,11 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
   var mtg_Gateway = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    x: unpack(rows_gateway, 'Power'),
-    y: unpack(rows_gateway, 'Toughness'),
+    x: unpack(rows_gateway, ''),
+    y: unpack(rows_gateway, ''),
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
-    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    text: unpack(rows, ''), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
       color: 'red'
@@ -141,11 +141,11 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
 
   var mtg_champ = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    x: unpack(rows_champ, 'Power'),
-    y: unpack(rows_champ, 'Toughness'),
+    x: unpack(rows_champ, ''),
+    y: unpack(rows_champ, ''),
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
-    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    text: unpack(rows, ''), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
       color: 'red'
@@ -159,11 +159,11 @@ let toughnessArray = unpack(rows, 'Toughness').map(Number)
   /*** Now that we know how to pull the data from a CSV, we can create our data objects as we've done before: ***/
 var mtg_friday = {
     // x and y are arrays of numeric values, so we can create those using unpack().
-    x: unpack(rows_friday, 'Power'),
-    y: unpack(rows_friday, 'Toughness'),
+    x: unpack(rows_friday, ''),
+    y: unpack(rows_friday, ''),
     type: 'scatter', // the type of plot you're producing. Scatter is used to plot points with x and y values
     mode: 'markers', // possible modes: markers, markers+text, lines
-    text: unpack(rows, 'Card Name'), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
+    text: unpack(rows, ''), // If specified, this is the text that pops up on hover. If not specified, the text is the y-value for the point.
     name: 'Mtg',
     marker: {
       color: 'red'
@@ -184,30 +184,30 @@ var mtg_friday = {
     showlegend: false,
     hovermode: true, // if false, disables the hover text for the entire plot
     xaxis: {
-     title: 'Power'
+     title: ''
     },
     yaxis: {
-     title: 'Toughness'
+     title: ''
     }
   }
 
   var layout_unstable = Object.assign({}, layout);
-    layout_unstable.title = "Unstable Creatures Power and Toughness";
+    layout_unstable.title = "";
 
   var layout_unhinged = Object.assign({}, layout);
-    layout_unhinged.title = "Unhinged Creatures Power and Toughness";
+    layout_unhinged.title = "";
 
   var layout_unglued = Object.assign({}, layout);
-    layout_unglued.title = "Unglued Creatures Power and Toughness";
+    layout_unglued.title = "";
 
   var layout_gateway = Object.assign({}, layout);
-    layout_gateway.title = "Gateway Creatures Power and Toughness";
+    layout_gateway.title = "";
 
   var layout_champ = Object.assign({}, layout);
-      layout_champ.title = "Champ Creatures Power and Toughness";
+      layout_champ.title = "";
 
       var layout_friday = Object.assign({}, layout);
-        layout_friday.title = "Friday Creatures Power and Toughness";
+        layout_friday.title = "";
 
 
 //  var layout_friday = Object.assign({}, layout);
@@ -217,58 +217,58 @@ var mtg_friday = {
    displayModeBar: false, // disable zoom, save and other toolbar options.
   }
 
-  Plotly.newPlot('viz', data, layout, options);
-  Plotly.newPlot('viz_unstable',data_unstable, layout_unstable, options);
-  Plotly.newPlot('viz_unhinged', data_unhinged, layout_unhinged, options);
-  Plotly.newPlot('viz_unglued', data_unglued, layout_unglued, options);
-  Plotly.newPlot('viz_gateway', data_gateway, layout_gateway, options);
-  Plotly.newPlot('viz_champ', data_champ, layout_champ, options);
-  Plotly.newPlot('viz_friday', data_friday, layout_friday, options);
+  Plotly.newPlot('', data, layout, options);
+  Plotly.newPlot('',data_unstable, layout_unstable, options);
+  Plotly.newPlot('', data_unhinged, layout_unhinged, options);
+  Plotly.newPlot('', data_unglued, layout_unglued, options);
+  Plotly.newPlot('', data_gateway, layout_gateway, options);
+  Plotly.newPlot('', data_champ, layout_champ, options);
+  Plotly.newPlot('', data_friday, layout_friday, options);
 
 
 
   $('button#ft').on('click', function(){
-    $('#viz').hide();
-    $('#viz_unstable').hide();
-    $('#viz_unhinged').hide();
-    $('#viz_champ').hide();
-    $('#viz_gateway').hide();
-    $('#viz_friday').show();
-    $('#viz_unglued').show();
+    $('').hide();
+    $('').hide();
+    $('').hide();
+    $('').hide();
+    $('').hide();
+    $('').show();
+    $('').show();
     console.log('works');
   });
 
   $('button#gt').on('click', function(){
-    $('#viz').hide();
-    $('#viz_gateway').show();
-    $('#viz_unhinged').show();
-    $('#viz_unglued').hide();
-    $('#viz_friday').hide();
-    $('#viz_champ').hide();
-    $('#viz_unstable').hide();
+    $('').hide();
+    $('').show();
+    $('').show();
+    $('').hide();
+    $('').hide();
+    $('').hide();
+    $('').hide();
     console.log('works');
   });
 
 
   $('button#ct').on('click', function(){
-    $('#viz').hide();
-    $('#viz_unglued').hide();
-    $('#viz_unhinged').hide();
-    $('#viz_gateway').hide();
-    $('#viz_friday').hide();
-    $('#viz_champ').show()
-    $('#viz_unstable').show();
+    $('').hide();
+    $('').hide();
+    $('').hide();
+    $('').hide();
+    $('').hide();
+    $('').show()
+    $('').show();
     console.log('works');
   });
 
   $('button#mtgall').on('click', function(){
-    $('#viz').show();
-    $('#viz_gateway').show();
-    $('#viz_unhinged').show();
-    $('#viz_unglued').show();
-    $('#viz_friday').show();
-    $('#viz_champ').show();
-    $('#viz_unstable').show();
+    $('').show();
+    $('').show();
+    $('').show();
+    $('').show();
+    $('').show();
+    $('').show();
+    $('').show();
     console.log('works');
   });
 

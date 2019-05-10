@@ -76,10 +76,44 @@ $(document).ready(function(){
  //else {
     //  var errorText = $('<h2>Could not find card</h2>')
   //    $('a.valueButton').after(errorText);
+
+
+
+
     }
   )
 
+  //code for final
 
+  $('.tcgtcg').hide();
+
+$('.tcgtcgcards').on('click', function(){
+$('.homescreen').hide();
+$('.tcgtcg').show();
+
+
+
+
+})
+
+$('#card').hide();
+$('.tcgtcgtcg').hide();
+
+$('.buttont').on('click', function(){
+console.log('trade');
+let cbox = $('input[type = "checkbox"]:checked');
+cbox.each(function(){
+  console.log($(this).val())
+  //select html element to put value of cbox. .append
+//$(this).append($('.tradew'));
+$(cbox).append($('.tradew'));
+})
+console.log(cbox);
+$('.tcgtcg').hide();
+$('.tcgtcgtcg').show();
+$('#card').show();//$('.textfield').before($(':checked'));
+console.log($(':checked'));
+})
 
 
 });
