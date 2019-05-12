@@ -85,15 +85,14 @@ $(document).ready(function(){
 
   //code for final
 
-  $('.tcgtcg').hide();
+
+
+$('.tcgtcg').hide();
 
 $('.tcgtcgcards').on('click', function(){
-$('.homescreen').hide();
-$('.tcgtcg').show();
 
-
-
-
+$('.homescreen').fadeOut(300);
+$('.tcgtcg').fadeIn(200);
 })
 
 $('#card').hide();
@@ -103,14 +102,14 @@ $('.buttont').on('click', function(){
 console.log('trade');
 let cbox = $('input[type = "checkbox"]:checked');
 cbox.each(function(){
-  console.log($(this).val())
+console.log($(this).val())
   //select html element to put value of cbox. .append
 //$(this).append($('.tradew'));
-$(cbox).append($('.tradew'));
+$('.tradew').append($(this).val());
 })
 console.log(cbox);
-$('.tcgtcg').hide();
-$('.tcgtcgtcg').show();
+$('.tcgtcg').fadeOut(300);
+$('.tcgtcgtcg').fadeIn(1000);
 $('#card').show();//$('.textfield').before($(':checked'));
 console.log($(':checked'));
 })
