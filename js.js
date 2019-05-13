@@ -109,7 +109,7 @@ $('.tradew').append($(this).val());
 })
 console.log(cbox);
 $('.tcgtcg').fadeOut(300);
-$('.tcgtcgtcg').fadeIn(1000);
+$('.tcgtcgtcg').fadeIn(200);
 $('#card').show();//$('.textfield').before($(':checked'));
 console.log($(':checked'));
 })
