@@ -90,7 +90,6 @@ $(document).ready(function(){
 $('.tcgtcg').hide();
 
 $('.tcgtcgcards').on('click', function(){
-
 $('.homescreen').fadeOut(300);
 $('.tcgtcg').fadeIn(200);
 })
