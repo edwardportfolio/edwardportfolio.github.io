@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  margin: 0 200px 30px 200px;
+  text-align: justify;
+}
+
+p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
